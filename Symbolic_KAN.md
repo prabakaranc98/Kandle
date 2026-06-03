@@ -84,6 +84,9 @@ where:
 - \(B\) = output shifting parameter
 
 Thus, each unit ultimately represents a single symbolic operation applied to a learned projection of the input features, enabling interpretable symbolic reasoning while retaining the expressive power of neural networks.
+### Result
+
+The learned representations not only match the target solutions but also recover the underlying analytical structure, highlighting the ability of the framework to extract mechanistic insight rather than purely predictive mappings. 
 
 ### Key Idea
 
