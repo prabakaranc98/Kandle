@@ -1,2 +1,3 @@
 # KAN and Deep Learning
-repo on advanced deep learning architecture, training, inference, analysis - implementations
+Understood that KANs are really expressive in nature. This ability helps in intepretability, explainability, etc..
+Maybe this nature helps in representation learning....
