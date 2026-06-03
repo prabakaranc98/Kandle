@@ -18,3 +18,24 @@
 * Proper initialization becomes challenging.
 * Poor initialization can cause **slow convergence and unstable training**.
 
+# Solutions Proposed in KAN-Transformer
+
+## S1. Rational Basis
+
+* Replaces the traditional **B-spline basis functions** used in KANs with **rational functions**.
+* Rational functions are composed of simple arithmetic operations (addition, multiplication, division), making them more GPU-friendly.
+* Eliminates costly spline interval lookups and branching operations.
+* Enables efficient CUDA implementation and faster training/inference.
+
+## S2. Group KAN
+
+* Instead of learning a separate activation function for every neuron connection, activation weights are **shared within groups of neurons**.
+* Significantly reduces the number of learnable parameters and computations.
+* Maintains model performance while improving efficiency.
+
+## S3. Variance-Preserving Initialization
+
+* Carefully initializes activation weights to maintain a stable activation variance across layers.
+* Prevents vanishing and exploding activations during deep network training.
+* Improves convergence and training stability.
+
