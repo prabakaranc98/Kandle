@@ -38,4 +38,30 @@
 * Carefully initializes activation weights to maintain a stable activation variance across layers.
 * Prevents vanishing and exploding activations during deep network training.
 * Improves convergence and training stability.
+# Future Work
+
+Several promising directions remain for further improving KAN-Transformer architectures.
+
+## 1. Exploration of Alternative Basis Functions
+
+While KAN-Transformer replaces B-spline functions with rational basis functions, other basis representations may offer better expressiveness or computational efficiency. Future research can investigate the integration of:
+
+* Fourier-based functions
+* Wavelet transforms
+* Gaussian radial basis functions (RBFs)
+
+A systematic comparison of these basis functions could reveal trade-offs between accuracy, interpretability, computational cost, and scalability.
+
+## 2. Adaptive MLP-KAN Hybrid Architectures
+
+KAN layers are generally more expressive than standard MLP layers but may incur additional computational overhead. An interesting direction is to develop adaptive architectures that dynamically choose between MLP and KAN components based on the complexity of the input or task. Such mechanisms could improve efficiency by allocating computational resources only where increased expressiveness is necessary.
+
+## 3. Scalability to Larger Models
+
+Although KAN-Transformer introduces Group KAN and rational basis functions to improve efficiency, further work is needed to scale the architecture to very large transformer models. Investigating parameter-sharing strategies, model compression techniques, and distributed training approaches could help extend KAN-based transformers to large-scale applications.
+
+## 4. Inference Speed Optimization
+
+Reducing inference latency remains an important challenge for practical deployment. Future research can focus on hardware-aware optimizations, kernel-level CUDA improvements, quantization techniques, and specialized accelerator implementations to further improve the runtime efficiency of KAN-based transformers.
+
 
